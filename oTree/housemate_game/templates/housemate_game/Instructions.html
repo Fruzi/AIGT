@@ -1,0 +1,25 @@
+{% load otree staticfiles %}
+
+<div class="instructions well well-lg">
+
+    <h3 class="panel-sub-heading">
+        Instructions
+    </h3>
+    <p>
+        This is a sort of chicken game with 2 players and an uncapped number of possible choices.
+    </p>
+    <p>
+        Both player prefer the opponent to take out the trash but lose out on rewards the longer the game drags on,
+        when will you give in and take it out yourself?
+    </p>
+    <p>
+        The time in which the trash is taken out is the lower of the two chosen by the players, and the payoffs
+        determined based on it. Whoever chose the smaller number will have to pay the tax, while the one who chose the bigger one
+        is exempt from it. If both players choose to take out the trash then both pay half the tax
+    </p>
+    <p>
+        Initial Reward {{ Constants.reward }}<br>
+        Tax {{ Constants.tax }}<br>
+        Diminishing factor {{ Constants.diminishing_factor }}
+    </p>
+</div>

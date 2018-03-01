@@ -1,0 +1,29 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Final results
+{% endblock %}
+
+{% block content %}
+
+    <p>
+       The game has ended!
+    <table class="table">
+        <tr>
+            <th>Round</th>
+            <th>Player and outcome</th>
+        </tr>
+        {% for p in player_in_all_rounds %}
+            <tr>
+                <td>{{ p.round_number }}</td>
+                <td>
+                    You waited {{ p.time_willing_to_wait }} your opponent waited {{p.time_opponent_willing_to_wait}}.
+                    Your prize was {{p.payoff}}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    Your total payoff is {{ total_payoff }}
+    </p>
+{% endblock %}
